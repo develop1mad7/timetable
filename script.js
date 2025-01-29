@@ -225,7 +225,7 @@ const renderTimetableLesson = async (timetable, timeLesson) => {
                 const $time = document.createElement('time')
                 const $para = document.createElement('p')
                 const renderPopup = `
-                <div class="popup-lesson-overlay">                                    
+                <div class="popup-lesson-overlay">
                     <div class="popup-lesson">
                     <button class="popup-lesson-close">X</button>
                         <div class="popup-lesson-grid">
@@ -253,7 +253,6 @@ const renderTimetableLesson = async (timetable, timeLesson) => {
                 $lesson.addEventListener('click', () => {
                     const sibling = $lesson.nextElementSibling;
                     const closePopup = sibling.children[0].children[0];
-                    console.log(closePopup)
                     sibling.classList.add('popup-lesson-overlay--active')
                     closePopup.addEventListener('click', () => {
                         sibling.classList.remove('popup-lesson-overlay--active')
